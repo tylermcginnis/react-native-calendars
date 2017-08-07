@@ -322,7 +322,7 @@ export default class AgendaView extends Component {
               theme={this.props.theme}
               onVisibleMonthsChange={this.onVisibleMonthsChange.bind(this)}
               ref={(c) => this.calendar = c}
-              minDate={this.props.minDate} 
+              minDate={this.props.minDate}
               maxDate={this.props.maxDate}
               selected={[this.state.selectedDay]}
               current={this.currentMonth}

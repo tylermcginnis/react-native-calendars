@@ -109,7 +109,7 @@ class Calendar extends Component {
 
   pressDay(day) {
     const minDate = parseDate(this.props.minDate);
-    const maxDate = parseDate(this.props.maxDate);
+    const maxDate = new Date().toISOString().split('T')[0]
     if (!(minDate && !dateutils.isGTE(day, minDate)) && !(maxDate && !dateutils.isLTE(day, maxDate))) {
       this.updateMonth(day);
       if (this.props.onDayPress) {

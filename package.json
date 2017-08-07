@@ -1,30 +1,22 @@
 {
-  "name": "react-native-calendars",
-  "version": "1.5.6",
+  "name": "udacifitness-calendar",
+  "version": "1.0.0",
   "main": "src/index.js",
-  "description": "React Native Calendar Components",
-  "scripts": {
-    "test": "jasmine src/*.spec.js && npm run lint",
-    "lint": "eslint src/ example/src"
-  },
+  "description": "Fork of Wix's react-native-calendars because my use case is 1 off and doesn't make sense for core.",
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/wix/react-native-calendars"
+    "url": "git+https://github.com/tylermcginnis/react-native-calendars"
   },
   "publishConfig": {
     "registry": "https://registry.npmjs.org/"
   },
-  "author": "Wix.com",
+  "author": "Fork of component from Wix.com",
   "license": "MIT",
   "dependencies": {
     "prop-types": "^15.5.10",
     "xdate": "^0.8.0"
   },
   "devDependencies": {
-    "eslint": "^3.19.0",
-    "babel-eslint": "^7.2.3",
-    "eslint-plugin-react": "^7.0.0",
-    "jasmine": "^2.5.2",
     "react": "16.0.0-alpha.6",
     "react-native": "0.44.0"
   }
