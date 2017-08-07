@@ -22,6 +22,12 @@ const KNOB_HEIGHT = 24;
 //Fallback when RN version is < 0.44
 const viewPropTypes = ViewPropTypes || View.propTypes;
 
+function timeToString (time = Date.now()) {
+  const date = new Date(time)
+  const todayUTC = new Date(Date.UTC(date.getFullYear(), date.getMonth(), date.getDate()))
+  return todayUTC.toISOString().split('T')[0]
+}
+
 export default class AgendaView extends Component {
   static propTypes = {
     // Specify theme properties to override specific styles for calendar parts. Default = {}
@@ -62,6 +68,13 @@ export default class AgendaView extends Component {
     // Month format in calendar title. Formatting values: http://arshaw.com/xdate/#Formatting
     monthFormat: PropTypes.string
   };
+
+  static defaultProps = {
+    rowHasChanged: () => (r1, r2) => {
+      return r1 !== r2
+    },
+    selected: timeToString()
+  }
 
   constructor(props) {
     super(props);

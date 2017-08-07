@@ -2,7 +2,7 @@
   "name": "udacifitness-calendar",
   "version": "1.0.0",
   "main": "src/index.js",
-  "description": "Fork of Wix's react-native-calendars because my use case is 1 off and doesn't make sense for core.",
+  "description": "Fork of Wix's react-native-calendars because my use case is a 1 off and doesn't make sense for core.",
   "repository": {
     "type": "git",
     "url": "git+https://github.com/tylermcginnis/react-native-calendars"
