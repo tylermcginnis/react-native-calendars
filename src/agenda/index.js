@@ -28,6 +28,20 @@ function timeToString (time = Date.now()) {
   return todayUTC.toISOString().split('T')[0]
 }
 
+function getMaxDate (time = Date.now()) {
+  const date = new Date(time)
+  const todayUTC = new Date(Date.UTC(date.getFullYear(), date.getMonth(), date.getDate()))
+  return todayUTC.toISOString().split('T')[0]
+}
+
+function getMinDate (time = Date.now()) {
+  var d = new Date(new Date().setDate(new Date().getDate() - 183))
+
+  const date = new Date(d.getTime())
+  const todayUTC = new Date(Date.UTC(date.getFullYear(), date.getMonth(), date.getDate()))
+  return todayUTC.toISOString().split('T')[0]
+}
+
 export default class AgendaView extends Component {
   static propTypes = {
     // Specify theme properties to override specific styles for calendar parts. Default = {}
@@ -73,7 +87,9 @@ export default class AgendaView extends Component {
     rowHasChanged: () => (r1, r2) => {
       return r1 !== r2
     },
-    selected: timeToString()
+    selected: timeToString(),
+    maxDate: getMaxDate(),
+    minDate: getMinDate(),
   }
 
   constructor(props) {
