@@ -1,1 +1,3 @@
-export default UdaciFitnessCalendar from './agenda'
+import UdaciFitnessCalendar from './agenda'
+
+export default UdaciFitnessCalendar
