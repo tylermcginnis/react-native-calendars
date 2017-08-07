@@ -255,6 +255,17 @@ export default class AgendaView extends Component {
     }
   }
 
+  formatDaysTheWayTheyUsedToBe = () => {
+    const days = this.props.items
+    return Object.keys(days).reduce((prev, key) => {
+      typeof days[key] === 'undefined'
+        ? prev[key] = []
+        : prev[key] = [days[key]]
+
+      return prev
+    }, {})
+  }
+
   renderReservations() {
     return (
       <ReservationsList
@@ -262,7 +273,7 @@ export default class AgendaView extends Component {
         renderItem={this.props.renderItem}
         renderDay={this.props.renderDay}
         renderEmptyDate={this.props.renderEmptyDate}
-        reservations={this.props.items}
+        reservations={this.formatDaysTheWayTheyUsedToBe()}
         selectedDay={this.state.selectedDay}
         topDay={this.state.topDay}
         onDayChange={this.onDayChange.bind(this)}
