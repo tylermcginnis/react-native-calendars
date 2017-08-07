@@ -258,7 +258,7 @@ export default class AgendaView extends Component {
   formatDaysTheWayTheyUsedToBe = () => {
     const days = this.props.items
     return Object.keys(days).reduce((prev, key) => {
-      typeof days[key] === 'undefined'
+      days[key] === null
         ? prev[key] = []
         : prev[key] = [days[key]]
 
