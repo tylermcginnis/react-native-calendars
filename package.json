@@ -1,6 +1,6 @@
 {
   "name": "udacifitness-calendar",
-  "version": "3.0.0",
+  "version": "4.0.0",
   "main": "src/index.js",
   "description": "Fork of Wix's react-native-calendars because my use case is a 1 off and doesn't make sense for core.",
   "repository": {
