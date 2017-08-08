@@ -133,7 +133,7 @@ class ReactComp extends Component {
     let content;
     if (reservation) {
       const firstItem = date ? true : false;
-      content = this.props.renderItem(reservation, firstItem);
+      content = this.props.renderItem(reservation, date.toString('yyyy-MM-dd'));
     } else {
       content = this.props.renderEmptyDate(date);
     }
