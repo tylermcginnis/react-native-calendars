@@ -140,7 +140,6 @@ class ReactComp extends Component {
 
     return (
       <View style={this.styles.container} onLayout={this.onRowLayoutChange.bind(this, ind)}>
-        {this.renderDate(date, reservation)}
         <View style={{flex:1}}>
           {content}
         </View>
