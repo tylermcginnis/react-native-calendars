@@ -1,10 +1,10 @@
 import React, {Component} from 'react';
 import {
-  ListView,
   ActivityIndicator,
   View,
   Text
 } from 'react-native';
+import ListView from "deprecated-react-native-listview";
 import PropTypes from 'prop-types';
 import XDate from 'xdate';
 
