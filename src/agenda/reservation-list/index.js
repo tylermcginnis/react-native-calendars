@@ -1,10 +1,10 @@
 import React, {Component} from 'react';
 import {
-  ListView,
   ActivityIndicator,
   View,
   Text
 } from 'react-native';
+import ListView from 'deprecated-react-native-listview'
 import PropTypes from 'prop-types';
 import XDate from 'xdate';
 
@@ -66,7 +66,7 @@ class ReactComp extends Component {
     this.scrollOver = true;
   }
 
-  componentWillMount() {
+  UNSAFE_componentWillMount() {
     this.updateDataSource(this.getReservations(this.props).reservations);
   }
 
@@ -91,7 +91,7 @@ class ReactComp extends Component {
     this.updateDataSource(reservations.reservations);
   }
 
-  componentWillReceiveProps(props) {
+  UNSAFE_componentWillReceiveProps(props) {
     if (!dateutils.sameDate(props.topDay, this.props.topDay)) {
       this.setState({
         reservations: []
