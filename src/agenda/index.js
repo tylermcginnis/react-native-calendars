@@ -205,11 +205,11 @@ export default class AgendaView extends Component {
     }
   }
 
-  componentWillMount() {
+  UNSAFE_componentWillMount() {
     this.loadReservations(this.props);
   }
 
-  componentWillReceiveProps(props) {
+  UNSAFE_componentWillReceiveProps(props) {
     if (props.items) {
       this.setState({
         firstResevationLoad: false

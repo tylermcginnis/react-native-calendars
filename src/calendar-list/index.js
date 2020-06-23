@@ -1,10 +1,10 @@
 import React, {Component} from 'react';
 import {
-  ListView,
   View,
   Platform,
   Text
 } from 'react-native';
+import ListView from 'deprecated-react-native-listview'
 import PropTypes from 'prop-types';
 import XDate from 'xdate';
 
@@ -126,7 +126,7 @@ class CalendarList extends Component {
     //});
   }
 
-  componentWillReceiveProps(props) {
+  UNSAFE_componentWillReceiveProps(props) {
     const current = parseDate(this.props.current);
     const nextCurrent = parseDate(props.current);
     if (nextCurrent && current && nextCurrent.getTime() !== current.getTime()) {
